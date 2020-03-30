@@ -1,0 +1,135 @@
+@import url(stylesheet.css),
+url(normalize.css),
+'mixin',
+'variables';
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: $grey;
+}
+
+h1,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    fill: $black;
+}
+
+.header {
+    @include row;
+    padding: 70px 0;
+    &__subtitle {
+        @include col(12, 12);
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 auto;
+        letter-spacing: 0.3em;
+        margin-bottom: 30px;
+    }
+    &__title {
+        @include col(12, 12);
+        color: $blue;
+        font-size: 36px;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+    }
+    &__text {
+        @include col(12, 12, 23%);
+        font-family: 'PT Sans', sans-serif;
+        letter-spacing: 0.1em;
+        font-size: 14px;
+    }
+}
+
+.servises {
+    @include row;
+    margin-bottom: 70px;
+    &__icon {
+        height: 64px;
+        & svg {
+            fill: $black;
+            transition: fill 0.3s ease-in;
+        }
+    }
+    &__title {
+        height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        font-size: 20px;
+        color: $black;
+        transition: color 0.3s ease-in;
+    }
+    &__text {
+        margin-top: 20px;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 10px;
+        text-transform: none;
+        line-height: 18px;
+        color: $grey;
+        transition: color 0.3s ease-in;
+    }
+    &__item {
+        @include col(3, 12);
+        background: $bg-items;
+        padding: 60px 35px 70px;
+        position: relative;
+        transition: 0.3s ease-in;
+        color: $white;
+        &:hover {
+            background: $blue;
+            & svg {
+                fill: $white;
+            }
+            & .servises__title {
+                color: $white;
+            }
+            & .servises__text {
+                color: $white;
+            }
+        }
+    }
+    &__link {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .servises__item {
+        @include col(6, 12);
+        padding: 30px 60px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__text {
+        font-size: 12px;
+    }
+    .servises__item {
+        @include col(12, 12);
+        padding: 30px 60px;
+        margin-bottom: 20px;
+    }
+}

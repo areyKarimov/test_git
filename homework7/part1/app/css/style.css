@@ -1,0 +1,148 @@
+@import url(stylesheet.css);
+@import url(normalize.css);
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: #898f99; }
+
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0; }
+
+svg {
+  fill: #1b1b1b; }
+
+.header {
+  font-size: 0;
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 70px 0; }
+  .header__subtitle {
+    width: 100%;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 auto;
+    letter-spacing: 0.3em;
+    margin-bottom: 30px; }
+  .header__title {
+    width: 100%;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    color: #0ec8cb;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px; }
+  .header__text {
+    width: 100%;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 23%;
+    padding-right: 23%;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 14px; }
+
+.servises {
+  font-size: 0;
+  margin: 0 auto;
+  max-width: 940px;
+  margin-bottom: 70px; }
+  .servises__icon {
+    height: 64px; }
+    .servises__icon svg {
+      fill: #1b1b1b;
+      transition: fill 0.3s ease-in; }
+  .servises__title {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #1b1b1b;
+    transition: color 0.3s ease-in; }
+  .servises__text {
+    margin-top: 20px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 10px;
+    text-transform: none;
+    line-height: 18px;
+    color: #898f99;
+    transition: color 0.3s ease-in; }
+  .servises__item {
+    width: 25%;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    background: #f7f7f7;
+    padding: 60px 35px 70px;
+    position: relative;
+    transition: 0.3s ease-in;
+    color: #fff; }
+    .servises__item:hover {
+      background: #0ec8cb; }
+      .servises__item:hover svg {
+        fill: #fff; }
+      .servises__item:hover .servises__title {
+        color: #fff; }
+      .servises__item:hover .servises__text {
+        color: #fff; }
+  .servises__link {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+
+@media screen and (max-width: 940px) {
+  .servises__item {
+    width: 50%;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    padding: 30px 60px;
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 500px) {
+  .header__text {
+    font-size: 12px; }
+  .servises__item {
+    width: 100%;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    padding: 30px 60px;
+    margin-bottom: 20px; } }
